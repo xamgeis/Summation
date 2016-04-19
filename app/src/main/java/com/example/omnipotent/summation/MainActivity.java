@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         n2 = Integer.parseInt(num2.getText().toString());
 
 
-        textSum.setText(Double.toString(n1+n2));
+        textSum.setText(Double.toString(n1-n2));
     }
 
     @Override
