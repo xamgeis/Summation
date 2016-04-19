@@ -4,10 +4,11 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
+
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,17 +16,28 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        EditText num1 = (EditText) findViewById(R.id.num1);
+        EditText num2 = (EditText) findViewById(R.id.num2);
+
+
+    }
+
+    public void add(){
+        int n1, n2, summation;
+        EditText num1 = (EditText) findViewById(R.id.num1);
+        EditText num2 = (EditText) findViewById(R.id.num2);
+        TextView textSum = (TextView) findViewById(R.id.sum);
+
+        n1 = Integer.parseInt(num1.getText().toString() );
+        n2 = Integer.parseInt(num2.getText().toString() );
+        summation = sum(n1,n2);
+
+        textSum.setText( Integer.toString(summation));
+    }
+
+    private int sum(int n1, int n2){
+        return n1 + n2;
     }
 
     @Override
