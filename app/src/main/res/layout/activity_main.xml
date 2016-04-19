@@ -11,31 +11,31 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.omnipotent.summation.MainActivity"
     tools:showIn="@layout/activity_main"
-    android:orientation="horizontal">
+    android:orientation="vertical">
 
     <EditText
         android:id="@+id/num1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="1st number" />
+         />
 
     <EditText
         android:id="@+id/num2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="2nd number"/>
+        />
 
     <Button
         android:id="@+id/add"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Add"
         android:onClick="add"/>
 
     <TextView
         android:id="@+id/sum"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="sum"/>
+        />
 
 </LinearLayout>

@@ -1,5 +1,6 @@
 package com.example.omnipotent.summation;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -7,37 +8,35 @@ import android.support.v7.app.AppCompatActivity;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    EditText num1, num2;
+    TextView textSum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        EditText num1 = (EditText) findViewById(R.id.num1);
-        EditText num2 = (EditText) findViewById(R.id.num2);
-
 
     }
 
-    public void add(){
-        int n1, n2, summation;
-        EditText num1 = (EditText) findViewById(R.id.num1);
-        EditText num2 = (EditText) findViewById(R.id.num2);
-        TextView textSum = (TextView) findViewById(R.id.sum);
+    public void add(View v) {
+        double n1, n2, summation;
+        num1 = (EditText) findViewById(R.id.num1);
+        num2 = (EditText) findViewById(R.id.num2);
+        textSum = (TextView) findViewById(R.id.sum);
 
-        n1 = Integer.parseInt(num1.getText().toString() );
-        n2 = Integer.parseInt(num2.getText().toString() );
-        summation = sum(n1,n2);
+        n1 = Integer.parseInt(num1.getText().toString());
+        n2 = Integer.parseInt(num2.getText().toString());
 
-        textSum.setText( Integer.toString(summation));
-    }
 
-    private int sum(int n1, int n2){
-        return n1 + n2;
+        textSum.setText(Double.toString(n1+n2));
     }
 
     @Override
