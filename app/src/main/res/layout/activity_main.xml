@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:padding="10dp"
+        android:text="1"
          />
 
     <EditText
@@ -27,6 +28,7 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:textAlignment="center"
+        android:text="1"
         />
 
     <Button
@@ -43,6 +45,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
+        android:editable="true"
+        android:text="2"
         />
 
 </LinearLayout>

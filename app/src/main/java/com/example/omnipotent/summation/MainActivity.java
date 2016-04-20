@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void add(View v) {
-        double n1, n2, summation;
+        int n1, n2;
         num1 = (EditText) findViewById(R.id.num1);
         num2 = (EditText) findViewById(R.id.num2);
         textSum = (TextView) findViewById(R.id.sum);
@@ -36,9 +36,12 @@ public class MainActivity extends AppCompatActivity {
         n2 = Integer.parseInt(num2.getText().toString());
 
 
-        textSum.setText(Double.toString(n1-n2));
+        textSum.setText(Integer.toString(sum(n1,n2)));
     }
 
+    public int sum( int n1, int n2){
+        return n1 + n2;
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
